@@ -1,175 +1,172 @@
 @import url('https://fonts.googleapis.com/css2?family=Chewy&family=Poppins:wght@100;400&display=swap');
-            *{
-                margin: 0;
-                padding: 0;
-                font-family: 'Poppins', sans-serif;
-                user-select: none;
-            }
-            .block{
-                width: 100%;
-                height: 75px;
-                display: flex;
-                justify-content: center;
-                background: #012733;
-                border-bottom: 1px solid orange;
-                box-shadow: orange 0 5px;
-            }
-            .container {
+
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            user-select: none;
+        }
+        .header {
             width: 100%;
-            max-width: 1200px;
+            height: 75px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: black;
+            border-bottom: 1px solid orange;
+            box-shadow: orange 0 5px;
+
+        }
+        .header-container {
+            width: 100%;
             height: 100%;
+            max-width: 1240px;
             display: grid;
-            grid-template-columns: 200px auto 200px;
-            grid-gap: 20px;
-            }
-            .brand{
-                width: 100%;
-                height: 100%;
-                padding-left: 10px;
-                display: flex;
-                align-items: center;
-
-            }
-            .brand img {
-                width: 100%;
-                max-width: 200px;
-                cursor: pointer;
-            }
-            .menu {
-                width: 100%;
-                height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
             
+        }
+        .box{
+        }
+        .box-1{
+            grid-area: brand;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+        .box-1 h1 {
+            padding-left: 10px;
+            color: blue;
+            font-size: 30px;
+        }
+        .box-1 h1 span {
+            color: orange;
+            font-weight: bold;
+        }
+        
+        .box-2{
+            grid-area: menu;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box-2 ul{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 5px;
+            margin: 0;
+            padding: 0;
+        }
+        .box-2 ul li{
+            width: 100%;
+            list-style: none;
+
+        }
+        .box-2 ul li a{
+            text-decoration: none;
+            display: block;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+            font-weight: bold;
+            color: white;
+
+        }
+        .box-2 ul li a i{
+            margin-right: 20px;
+        }
+        .box-2 ul li a:hover{
+            color: orange;
+        }
+        .box-3{
+            grid-area: call;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+        .box-3 ul{
+            width: 100%;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+        .box-3 ul li{
+            list-style: none;
+            margin-right: 20px;
+
+        }
+        .box-3 ul li a{
+            text-decoration: none;
+            display: block;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+
+        }
+        .box-3 ul li a i{
+            margin-right: 5px;
+        }
+        
+        .box-3 ul li a h2{
+            color: red;
+        }
+        #call-icon{
+            color: wheat;
+        }
+        #facebook-icon{
+            color: wheat;
+        }
+
+
+
+
+        @media only screen and (max-width: 600px) {
+            .header{
+                height: 100px;
             }
-            .menu ul{
-                width: 100%;
-                max-width: 600px;
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                grid-gap: 5px;
-                margin: 0;
-                padding: 0;
-            }
-            .menu ul li{
-                width: 100%;
-                list-style: none;
+            .header-container {
+                grid-template-columns: auto auto;
+                grid-template-areas: 
+                    'brand call'
+                    'menu menu';
 
             }
-            .menu ul li a{
-                text-decoration: none;
-                display: block;
-                height: 100%;
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: 15px;
-                font-weight: bold;
-                color: white;
+          
+
+        }
+        @media only screen and (min-width: 600px) {
+            .header{
+                height: 100px;
+            }
+            .header-container {
+                grid-template-columns: auto auto;
+                grid-template-areas: 
+                    'brand call'
+                    'menu menu';
 
             }
-            .menu ul li a i{
-                margin-right: 5px;
+
+        }
+        @media only screen and (min-width: 900px) {
+            .header{
+                height: 75px;
             }
-            .menu ul li a:hover{
-                color: orange;
-            }
-            .link-menu {
-                width: 100%;
-                height: 100%;
-                display: flex;
-                justify-content: end;
-                align-items: center;
-            }
-            .link-menu ul{
-                width: 100%;
-                display: flex;
-                justify-content: end;
-                align-items: center;
-            }
-            .link-menu ul li{
-                list-style: none;
-                margin-right: 30px;
+            .header-container {
+                grid-template-columns: auto auto auto;
+                grid-template-areas: 
+                    'brand menu call';
 
             }
-            .link-menu ul li a{
-                text-decoration: none;
-                display: block;
-                height: 100%;
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: 30px;
-                font-weight: bold;
-                color: white;
 
-            }
-            .link-menu ul li a i{
-                margin-right: 5px;
-            }
-            @media only screen and (max-width: 600px) {
-                .block{
-                    height: 50px;
-                }
-                .container{
-                    grid-template-columns: 1fr;
-                }
-                .brand{
-                    display: none;
-                }
-                .link-menu{
-                    display: none;
-                }
-                .menu ul li a{
-                    font-size: 12px;
+        }
+        @media only screen and (min-width: 1200px) {
+            
 
-                }
-                
-                
-     
-            }
-            @media only screen and (min-width: 600px) {
-
-                .container{
-                    grid-template-columns: 150px auto 100px;
-                }
-                .link-menu ul li{
-                    margin-right: 10px;
-
-                }
-                .menu ul li a{
-                    font-size: 12px;
-
-                    }
-                .link-menu ul li a{
-                    font-size: 20px;
-
-                }
-            }
-            @media only screen and (min-width: 900px) {
-
-                .container{
-                    grid-template-columns: 200px auto 150px;
-                }
-                .link-menu ul li{
-                    margin-right: 10px;
-
-                }
-                .menu ul li a{
-                    font-size: 15px;
-
-                    }
-                .link-menu ul li a{
-                    font-size: 30px;
-
-                }
-            }
-            @media only screen and (min-width: 1200px) {
-                .container{
-                    grid-template-columns: 250px auto 250px;
-                }
-
-            }
+        }
