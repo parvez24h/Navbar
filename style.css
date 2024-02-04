@@ -109,6 +109,7 @@
         }
         @media only screen and (max-width: 600px) {
             .header-container {
+                padding-top: 10px;
                 grid-template-columns: 60% 40%;
                 grid-template-areas: 
                     'brand menu-link'
@@ -116,17 +117,17 @@
 
             }
             .brand{
-                min-height: 50px;
+                min-height: 40px;
             }
             .menu{
-                min-height: 50px;
+                min-height: 40px;
             }
             .menu ul li a{
                 font-size: 12px;
 
             }
             .menu-link{
-                min-height: 50px;
+                min-height: 40px;
             }
             .menu-link ul li{
                 margin-right: 20px;
@@ -141,6 +142,7 @@
         }
         @media only screen and (min-width: 600px) {
             .header-container {
+                padding-top: 10px;
                 grid-template-columns: 50% 50%;
                 grid-template-areas: 
                     'brand menu-link'
@@ -148,18 +150,19 @@
 
             }
             .brand{
-                min-height: 50px;
+                min-height: 40px;
             }
             .menu{
-                min-height: 50px;
+                min-height: 40px;
             }
             .menu-link{
-                min-height: 50px;
+                min-height: 40px;
             }
 
         }
         @media only screen and (min-width: 900px) {
             .header-container {
+                padding-top: 0;
                 grid-template-columns: 30% 50% 20%;
                 grid-template-areas: 
                     'brand menu menu-link';
