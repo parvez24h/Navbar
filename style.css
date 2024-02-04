@@ -1,191 +1,198 @@
 @import url('https://fonts.googleapis.com/css2?family=Chewy&family=Poppins:wght@100;400&display=swap');
-        *{
-            margin: 0;
-            padding: 0;
-            font-family: 'Poppins', sans-serif;
-            user-select: none;
-        }
-        .header-block{
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            background: #012733;
-            border-bottom: 1px solid orange;
-            box-shadow: orange 0 5px;
-        }
-        .header-container{
-            width: 100%;
-            max-width: 1200px;
-            display: grid;
-            grid-template-columns: 300px auto 300px;
-            grid-template-areas: 
-                    'brand menu menu-link';
-        }
-        .brand{
-            grid-area: brand;
-            min-width: 100px;
-            min-height: 80px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            
-        }
-        .brand img{
-            width: 90%;
-            max-width: 240px;
-        }
-        .menu{
-            grid-area: menu;
-            min-width: 100px;
-            min-height: 80px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .menu ul{
-                width: 100%;
-                max-width: 500px;
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                grid-gap: 5px;
-                margin: 0;
-                padding: 0;
-            }
-        .menu ul li{
-            width: 100%;
-            list-style: none;
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    user-select: none;
+}
+.header-block{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: #012733;
+    border-bottom: 1px solid orange;
+    box-shadow: orange 0 5px;
+}
+.header-container{
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 300px auto 300px;
+    grid-template-areas: 
+            'brand menu menu-link';
+}
+.brand{
+    grid-area: brand;
+    min-width: 100px;
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.brand img{
+    width: 90%;
+    max-width: 240px;
+}
+.menu{
+    grid-area: menu;
+    min-width: 100px;
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu ul{
+        width: 100%;
+        max-width: 500px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 5px;
+        margin: 0;
+        padding: 0;
+    }
+.menu ul li{
+    width: 100%;
+    list-style: none;
 
-        }
-        .menu ul li a{
-            text-decoration: none;
-            display: block;
-            height: 100%;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 15px;
-            font-weight: bold;
-            color: white;
+}
+.menu ul li a{
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
 
-        }
-        .menu ul li a i{
-            margin-right: 5px;
-        }
-        .menu ul li a:hover{
-            color: orange;
-        }
-        .menu-link{
-            grid-area: menu-link;
-            min-width: 100px;
-            min-height: 80px;
-            display: flex;
-            justify-content: end;
-            align-items: center;
-        }
-        .menu-link ul{
-            width: 100%;
-            display: flex;
-            justify-content: end;
-            align-items: center;
-        }
-        .menu-link ul li{
-            list-style: none;
-            margin-right: 30px;
+}
+.menu ul li a i{
+    margin-right: 5px;
+}
+.menu ul li a:hover{
+    color: orange;
+}
+.menu-link{
+    grid-area: menu-link;
+    min-width: 100px;
+    min-height: 80px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.menu-link ul{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.menu-link ul li{
+    list-style: none;
+    margin-right: 30px;
 
-        }
-        .menu-link ul li a{
-            text-decoration: none;
-            display: block;
-            height: 100%;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 30px;
-            font-weight: bold;
-            color: white;
+}
+.menu-link ul li a{
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
 
-        }
-        @media only screen and (max-width: 600px) {
-            .header-container {
-                padding-top: 10px;
-                grid-template-columns: 60% 40%;
-                grid-template-areas: 
-                    'brand menu-link'
-                    'menu menu';
+}
+.body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media only screen and (max-width: 600px) {
+    .header-container {
+        padding-top: 10px;
+        grid-template-columns: 60% 40%;
+        grid-template-areas: 
+            'brand menu-link'
+            'menu menu';
 
-            }
-            .brand{
-                min-height: 40px;
-            }
-            .menu{
-                min-height: 40px;
-            }
-            .menu ul li a{
-                font-size: 12px;
+    }
+    .brand{
+        min-height: 40px;
+    }
+    .menu{
+        min-height: 40px;
+    }
+    .menu ul li a{
+        font-size: 12px;
 
-            }
-            .menu-link{
-                min-height: 40px;
-            }
-            .menu-link ul li{
-                margin-right: 20px;
+    }
+    .menu-link{
+        min-height: 40px;
+    }
+    .menu-link ul li{
+        margin-right: 20px;
 
-            }
-            .menu-link ul li a{
-                font-size: 20px;
+    }
+    .menu-link ul li a{
+        font-size: 20px;
 
-            }
-          
+    }
+    
 
-        }
-        @media only screen and (min-width: 600px) {
-            .header-container {
-                padding-top: 10px;
-                grid-template-columns: 50% 50%;
-                grid-template-areas: 
-                    'brand menu-link'
-                    'menu menu';
+}
+@media only screen and (min-width: 600px) {
+    .header-container {
+        padding-top: 10px;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+            'brand menu-link'
+            'menu menu';
 
-            }
-            .brand{
-                min-height: 40px;
-            }
-            .menu{
-                min-height: 40px;
-            }
-            .menu-link{
-                min-height: 40px;
-            }
+    }
+    .brand{
+        min-height: 40px;
+    }
+    .menu{
+        min-height: 40px;
+    }
+    .menu-link{
+        min-height: 40px;
+    }
 
-        }
-        @media only screen and (min-width: 900px) {
-            .header-container {
-                padding-top: 0;
-                grid-template-columns: 30% 50% 20%;
-                grid-template-areas: 
-                    'brand menu menu-link';
+}
+@media only screen and (min-width: 900px) {
+    .header-container {
+        padding-top: 0;
+        grid-template-columns: 30% 50% 20%;
+        grid-template-areas: 
+            'brand menu menu-link';
 
-            }
-            
-            .brand{
-                min-height: 75px;
-            }
-            .menu{
-                min-height: 75px;
-            }
-            .menu-link{
-                min-height: 75px;
-            }
+    }
+    
+    .brand{
+        min-height: 75px;
+    }
+    .menu{
+        min-height: 75px;
+    }
+    .menu-link{
+        min-height: 75px;
+    }
 
-        }
-        @media only screen and (min-width: 1200px) {
-            .header-container {
-                grid-template-columns: 300px auto 300px;
-                grid-template-areas: 
-                        'brand menu menu-link';
+}
+@media only screen and (min-width: 1200px) {
+    .header-container {
+        grid-template-columns: 300px auto 300px;
+        grid-template-areas: 
+                'brand menu menu-link';
 
-            }
+    }
 
-        }
+}
