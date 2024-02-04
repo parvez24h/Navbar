@@ -1,67 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Chewy&family=Poppins:wght@100;400&display=swap');
-
         *{
             margin: 0;
             padding: 0;
             font-family: 'Poppins', sans-serif;
             user-select: none;
         }
-        .header {
+        .header-block{
             width: 100%;
-            height: 75px;
             display: flex;
             justify-content: center;
-            align-items: center;
-            background: black;
+            background: #012733;
             border-bottom: 1px solid orange;
             box-shadow: orange 0 5px;
-
         }
-        .header-container {
+        .header-container{
             width: 100%;
-            height: 100%;
-            max-width: 1240px;
+            max-width: 1200px;
             display: grid;
+            grid-template-columns: 300px auto 300px;
+            grid-template-areas: 
+                    'brand menu menu-link';
+        }
+        .brand{
+            grid-area: brand;
+            min-width: 100px;
+            min-height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             
         }
-        .box{
+        .brand img{
+            width: 90%;
+            max-width: 240px;
         }
-        .box-1{
-            grid-area: brand;
-            display: flex;
-            justify-content: start;
-            align-items: center;
-        }
-        .box-1 h1 {
-            padding-left: 10px;
-            color: blue;
-            font-size: 30px;
-        }
-        .box-1 h1 span {
-            color: orange;
-            font-weight: bold;
-        }
-        
-        .box-2{
+        .menu{
             grid-area: menu;
+            min-width: 100px;
+            min-height: 80px;
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        .box-2 ul{
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-gap: 5px;
-            margin: 0;
-            padding: 0;
-        }
-        .box-2 ul li{
+        .menu ul{
+                width: 100%;
+                max-width: 500px;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-gap: 5px;
+                margin: 0;
+                padding: 0;
+            }
+        .menu ul li{
             width: 100%;
             list-style: none;
 
         }
-        .box-2 ul li a{
+        .menu ul li a{
             text-decoration: none;
             display: block;
             height: 100%;
@@ -74,30 +69,32 @@
             color: white;
 
         }
-        .box-2 ul li a i{
-            margin-right: 20px;
+        .menu ul li a i{
+            margin-right: 5px;
         }
-        .box-2 ul li a:hover{
+        .menu ul li a:hover{
             color: orange;
         }
-        .box-3{
-            grid-area: call;
+        .menu-link{
+            grid-area: menu-link;
+            min-width: 100px;
+            min-height: 80px;
             display: flex;
             justify-content: end;
             align-items: center;
         }
-        .box-3 ul{
+        .menu-link ul{
             width: 100%;
             display: flex;
             justify-content: end;
             align-items: center;
         }
-        .box-3 ul li{
+        .menu-link ul li{
             list-style: none;
-            margin-right: 20px;
+            margin-right: 30px;
 
         }
-        .box-3 ul li a{
+        .menu-link ul li a{
             text-decoration: none;
             display: block;
             height: 100%;
@@ -105,68 +102,87 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 25px;
+            font-size: 30px;
             font-weight: bold;
             color: white;
 
         }
-        .box-3 ul li a i{
-            margin-right: 5px;
-        }
-        
-        .box-3 ul li a h2{
-            color: red;
-        }
-        #call-icon{
-            color: wheat;
-        }
-        #facebook-icon{
-            color: wheat;
-        }
-
-
-
-
         @media only screen and (max-width: 600px) {
-            .header{
-                height: 100px;
-            }
             .header-container {
-                grid-template-columns: auto auto;
+                grid-template-columns: 60% 40%;
                 grid-template-areas: 
-                    'brand call'
+                    'brand menu-link'
                     'menu menu';
+
+            }
+            .brand{
+                min-height: 50px;
+            }
+            .menu{
+                min-height: 50px;
+            }
+            .menu ul li a{
+                font-size: 12px;
+
+            }
+            .menu-link{
+                min-height: 50px;
+            }
+            .menu-link ul li{
+                margin-right: 20px;
+
+            }
+            .menu-link ul li a{
+                font-size: 20px;
 
             }
           
 
         }
         @media only screen and (min-width: 600px) {
-            .header{
-                height: 100px;
-            }
             .header-container {
-                grid-template-columns: auto auto;
+                grid-template-columns: 50% 50%;
                 grid-template-areas: 
-                    'brand call'
+                    'brand menu-link'
                     'menu menu';
 
+            }
+            .brand{
+                min-height: 50px;
+            }
+            .menu{
+                min-height: 50px;
+            }
+            .menu-link{
+                min-height: 50px;
             }
 
         }
         @media only screen and (min-width: 900px) {
-            .header{
-                height: 75px;
-            }
             .header-container {
-                grid-template-columns: auto auto auto;
+                grid-template-columns: 30% 50% 20%;
                 grid-template-areas: 
-                    'brand menu call';
+                    'brand menu menu-link';
 
+            }
+            
+            .brand{
+                min-height: 75px;
+            }
+            .menu{
+                min-height: 75px;
+            }
+            .menu-link{
+                min-height: 75px;
             }
 
         }
         @media only screen and (min-width: 1200px) {
-            
+            .header-container {
+                grid-template-columns: 300px auto 300px;
+                grid-template-areas: 
+                        'brand menu menu-link';
+
+            }
 
         }
